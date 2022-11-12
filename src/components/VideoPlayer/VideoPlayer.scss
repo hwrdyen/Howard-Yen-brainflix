@@ -1,0 +1,280 @@
+@media screen and (min-device-width: 0px){
+    .VideoPlayer__video {
+        margin-bottom: 16px;
+        position: relative;
+    }
+
+    .VideoPlayer__video--currentvideo {
+        width: 100%;
+        height: 195px;
+        object-fit: cover;
+    }
+
+    .VideoPlayer__video--icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 170px;
+        gap: 10px;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .VideoPlayer__section--left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: #000000;
+        opacity: 50%;
+        padding: 2.5px 5px;
+        width: 5%;
+        height: 10px;
+    }
+
+    .VideoPlayer__section--middle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: #000000;
+        opacity: 50%;
+        padding: 2.5px 5px;
+        width: 70%;
+        height: 10px;
+    }
+
+    .VideoPlayer__section--right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: #000000;
+        opacity: 50%;
+        padding: 2.5px 8px;
+        width: 10%;
+        height: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .VideoPlayer-icon__play {
+        width: 10px;
+        height: 10px;
+        z-index: 10;
+    }
+
+    .VideoPlayer-icon__progressbar {
+        position: absolute;
+        top: 6px;
+        right: 33%;
+        background-color: #000000;
+        width: 52%;
+        height: 3px;
+        border-radius: 4px;
+        z-index: 10;
+    }
+
+    .VideoPlayer-icon__timeleft {
+        position: absolute;
+        top: 4px;
+        right: 23%;
+        color: white;
+        font-size: 7px;
+    }
+
+    .VideoPlayer-icon__fullscreen,
+    .VideoPlayer-icon__volumeup {
+        width: 15px;
+        height: 15px;
+    }
+
+    .VideoPlayer__info {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .VideoPlayer__info--title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .VideoPlayer-title__title {
+        font-weight: bold;
+        padding: 0.9375rem 0px;
+        border-bottom: 0.0625rem solid #E1E1E1;
+    }
+
+    .VideoPlayer-title__subtitle {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px 0px;
+        border-bottom: 0.0625rem solid #E1E1E1;
+
+    }
+
+    .VideoPlayer-title__subtitle :nth-child(1) {order: 1;}
+    .VideoPlayer-title__subtitle :nth-child(2) {order: 3;}
+    .VideoPlayer-title__subtitle :nth-child(3) {order: 2;}
+    .VideoPlayer-title__subtitle :nth-child(4) {order: 4;}
+
+    .VideoPlayer-subtitle__channel, 
+    .VideoPlayer-subtitle__timestamp, 
+    .VideoPlayer-subtitle__viewssection, 
+    .VideoPlayer-subtitle__likessection {
+        width: 45%;
+        margin: 10px 0px;
+    }
+
+    .VideoPlayer-subtitle__timestamp {
+        color: #AFAFAF;
+    }
+
+    .VideoPlayer-subtitle__viewssection, 
+    .VideoPlayer-subtitle__likessection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    .VideoPlayer-subtitle__viewsicon,
+    .VideoPlayer-subtitle__likesicon {
+        width: 22px;
+        height: 16px;
+    }
+
+    .VideoPlayer-subtitle__views, 
+    .VideoPlayer-subtitle__likes {
+        padding-left: 10px;
+        color: #AFAFAF;
+    }
+
+    .VideoPlayer-subtitle__channel {
+        font-weight: bold;
+    }
+
+    .VideoPlayer-title__description {
+        margin-top: 16px;
+    }
+
+}
+
+@media screen and (min-device-width: 768px){
+    .VideoPlayer__video {
+        width: 100vw;
+        height: 400px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .VideoPlayer__video--currentvideo {
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .VideoPlayer__video--icon {
+        top: 375px;
+    }
+
+    .VideoPlayer-icon__progressbar {
+        width: 56%;
+        right: 28%;
+    }
+
+    .VideoPlayer-icon__timeleft {
+        right: 22%;
+    }
+
+    .VideoPlayer__info {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    .VideoPlayer-title__title {
+        border: none;
+        padding-bottom: 0px;
+    }
+
+    .VideoPlayer-title__subtitle :nth-child(1) {order: 1;}
+    .VideoPlayer-title__subtitle :nth-child(2) {order: 2;}
+    .VideoPlayer-title__subtitle :nth-child(3) {order: 3;}
+    .VideoPlayer-title__subtitle :nth-child(4) {order: 4;}
+
+    .VideoPlayer-subtitle__channel, 
+    .VideoPlayer-subtitle__timestamp, 
+    .VideoPlayer-subtitle__viewssection, 
+    .VideoPlayer-subtitle__likessection {
+        width: auto;
+        margin: 10px 0px;
+    }
+
+    .VideoPlayer-subtitle__viewssection {
+        margin-left: 38%;
+    }
+
+    .VideoPlayer-subtitle__likessection {
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (min-device-width: 1280px){
+    .VideoPlayer__video {
+        width: 100vw;
+        height: 550px;
+        background-color: black;
+        margin-bottom: 0px;
+    }
+
+    .VideoPlayer__video--currentvideo {
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .VideoPlayer__video--icon {
+        width: 70%;
+        top: 510px;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .VideoPlayer-icon__progressbar {
+        width: 43%;
+        right: 33%;
+    }
+
+    .VideoPlayer-icon__timeleft {
+        right: 28%;
+    }
+
+    .VideoPlayer__detail {
+        display: flex;
+        flex-direction: row;
+        padding-left: 63px;
+        padding-right: 63px;
+    }
+
+    .VideoPlayer__detail--left {
+        width: 70%;
+        
+    }
+
+    .VideoPlayer__info {
+        padding-top: 36px;
+    }
+}

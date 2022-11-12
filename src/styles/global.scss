@@ -1,0 +1,146 @@
+/* <Type Kit> */
+/* Typeface*/
+@font-face {
+    font-family: "Avenir";
+    src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+         url("../assets/fonts/Alternative_files/AvenirNextLTPro.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+         url("../assets/fonts/Alternative_files/AvenirNextLTProBold.ttf") format("ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* <Colors> */
+/* Primary Colors*/
+$primary_black: #323232;
+$primary_silver: #AFAFAF;
+$primary_white: #FFFFFF;
+
+/* Secondary Colors */
+$secondary_darkblack: #000000;
+$secondary_mercury: #E1E1E1;
+$secondary_alabaster: #FAFAFA;
+
+/* <Layout Grid> */
+/* device width */
+$desktop_min_viewwidth: 1280px;
+$tablet_min_viewwidth: 768px;
+$mobile_min_viewwidth: 0px;
+
+/* <Padding> */
+/* Desktop and Tablet */
+$DT_padding_beforeheadline: 48px;
+$DT_padding_afterheadline: 36px;
+$DT_padding_betweencomponents: 36px;
+
+/* Mobile */
+$MB_padding_beforeheadline: 24px;
+$MB_padding_afterheadline: 16px;
+$MB_padding_betweencomponents: 16px;
+
+body {
+    font-family: "Avenir";
+}
+
+label,
+button,
+input,
+textarea {
+    font-family: "Avenir";
+    color: $secondary_darkblack;
+}
+
+@media screen and (min-device-width: 0px){
+    body {
+        margin: 8px 0px;
+    }
+
+    /* Font Size */
+    .pageheader {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+    .sectionheader {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+    .subheader {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+    }
+
+    .bodycopy {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+    }
+
+    .footercopy {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+    }
+
+    .labelandbuttons {
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    body {
+        margin: 16px 0px;
+    }
+
+    /* Font Size */
+    .pageheader {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        font-weight: 700;
+    }
+
+    .sectionheader {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 700;
+    }
+
+    .subheader {
+        font-size: 0.875rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+
+    .bodycopy {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+    }
+
+    .footercopy {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+    }
+
+    .labelandbuttons {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+}

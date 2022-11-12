@@ -1,0 +1,30 @@
+@media screen and (min-device-width: 0px){
+    .NextVideoList__container {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 24px;
+    }
+
+    .NextVideoList__title {
+        font-weight: bold;
+        color: #AFAFAF;
+    }
+    
+    .NextVideoList__VideoList {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+
+}
+
+@media screen and (min-device-width: 1280px){
+    .NextVideoList__container {
+        padding-top: 36px;
+        border-left: 1px solid #E1E1E1;
+    }
+    
+}

@@ -1,0 +1,123 @@
+@media screen and (min-device-width: 0px){
+    .Comment__container {
+        padding: 15px 16px;
+        border-bottom: 0.0625rem solid #E1E1E1;
+    }
+
+    .Comment__count {
+        font-weight: bold;
+    }
+
+    .Comment__submitform {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+        margin-top: 24px;
+    }
+    
+    .Comment__profileimg {
+        object-position: 20% 80%;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+    }
+
+    .Comment__form {
+        width: 75%;
+    }
+
+    .Comment__title--comment {
+        font-weight: bold;
+        color: #AFAFAF;
+    }
+    
+    .Comment__input--comment {
+        width: 95%;
+        height: 6.25rem;
+        padding-left: 0.75rem;
+        padding-top: 0.75rem;
+    }
+
+    .Comment__button {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        width: 100%;
+        height: 1.875rem;
+        background-color: #0095FF;
+        padding: 20px 0px;
+        text-align: center;
+        color: white;
+        border: none;
+    }
+
+    .Comment__button--icon {
+        margin-left: 5px;
+
+    }
+
+    .Comment__button--placeholder {
+        padding-left: 25%;
+        color: white;
+    }
+
+    .CommentCard_list {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Comment__container {
+        padding-top: 15px;
+        padding-bottom: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 36px;
+        margin-right: 36px;
+    }
+
+    .Comment__profileimg {
+        position: relative;
+        top: 20px;
+    }
+
+    .Comment__form {
+        width: 80vw;
+    }
+
+    .Comment__form--input {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .Comment__input--comment {
+        width: 60%;
+        height: 25px;
+        padding-left: 12px;
+        padding-top: 12px;
+    }
+
+    .Comment__button {
+        width: 30%;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Comment__input--comment {
+        width: 73%;
+    }
+
+    .Comment__button {
+        width: 22%;
+    }
+
+    .Comment__button--placeholder {
+        padding-left: 15%;
+    }
+}
+

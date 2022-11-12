@@ -1,0 +1,137 @@
+@media screen and (min-device-width: 0px){
+    .Header {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    .Header__logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        margin: 16px 0px;
+    }
+
+    .Header__logo--link,
+    .Header__logo--img {
+        max-height: 25px;
+        max-width: 120px;
+    }
+
+    .Header__navbar :nth-child(1) {order: 1;}
+    .Header__navbar :nth-child(2) {order: 3;}
+    .Header__navbar :nth-child(3) {order: 2;}
+
+    .Header__navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+
+    .Header__search--input {
+        width: 70%;
+        height: 36px;
+        border-radius: 4px;
+        padding-left: 40px;
+        background: url("../../assets/icons/search.svg") no-repeat left;
+        background-size: 20px;
+        background-position-x: 10px;
+        margin-right: 10px;
+        margin-bottom: 16px;
+        border: 1px solid #E1E1E1;
+
+    }
+    
+    .Header__upload--button{
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        width: 100%;
+        height: 36px;
+        background-color: #0095FF;
+        padding: 20px 0px;
+        text-align: center;
+        border: none;
+    }
+
+    .upload__section--icon {
+        margin-left: 5px;
+    }
+    
+    .upload__section--placeholder {
+        padding-left: 35%;
+        color: white;
+    }
+    
+    .user__icon {
+        object-position: 20% 80%;
+        object-fit: cover;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 36px;
+        padding-right: 36px;
+        gap: 20%;
+        margin-bottom: 24px;
+    }
+
+    .Header__logo {
+        max-height: 25px;
+        max-width: 120px; 
+    }
+
+    .Header__navbar {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        gap: 15px;
+    }
+
+    .Header__navbar :nth-child(1) {order: 1;}
+    .Header__navbar :nth-child(2) {order: 2;}
+    .Header__navbar :nth-child(3) {order: 3;}
+
+    .Header__search--input {
+        width: 40%;
+        margin-bottom: 0px;
+    }
+
+    .Header__upload--button {
+        width: 30%;
+    }
+
+    .upload__section--placeholder {
+        padding-left: 20%;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Header {
+        padding-left: 63px;
+        padding-right: 63px;
+        gap: 35%;
+    }
+
+    .Header__navbar {
+        width: 60%;
+    }
+
+    .Header__upload--button {
+        width: 25%;
+    }
+}
