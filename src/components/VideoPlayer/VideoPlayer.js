@@ -74,7 +74,7 @@ function VideoPlayer() {
                             </div>
                         </div>
 
-                        <span className="VideoPlayer-title__description">{VideoDetails[CurrentVideoIndex].description}</span>
+                        <span className="VideoPlayer-title__description bodycopy">{VideoDetails[CurrentVideoIndex].description}</span>
                     </div>
                     <Comment comment_list = {VideoDetails[CurrentVideoIndex].comments} AddNewCommenttoDatabase = {AddNewCommenttoDatabase}/>
                 </div>

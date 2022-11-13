@@ -75,7 +75,7 @@
         top: 6px;
         right: 33%;
         background-color: #000000;
-        width: 52%;
+        width: 50%;
         height: 3px;
         border-radius: 4px;
         z-index: 10;
@@ -186,16 +186,24 @@
         object-fit: cover;
     }
 
+    .VideoPlayer__section--left,
+    .VideoPlayer__section--middle,
+    .VideoPlayer__section--right {
+        height: 15px;
+    }
+
     .VideoPlayer__video--icon {
         top: 375px;
     }
 
     .VideoPlayer-icon__progressbar {
+        top: 10px;
         width: 56%;
         right: 28%;
     }
 
     .VideoPlayer-icon__timeleft {
+        top: 7px;
         right: 22%;
     }
 

@@ -29,7 +29,6 @@
     }
 
     .Comment__title--comment {
-        font-weight: bold;
         color: #AFAFAF;
     }
     
@@ -52,6 +51,12 @@
         color: white;
         border: none;
     }
+
+    .Comment__button:hover {
+        background-color: #0065AD;
+        color: white;
+    }
+
 
     .Comment__button--icon {
         margin-left: 5px;
@@ -87,6 +92,10 @@
 
     .Comment__form {
         width: 80vw;
+    }
+
+    .Comment__title--comment {
+        color: #AFAFAF;
     }
 
     .Comment__form--input {
