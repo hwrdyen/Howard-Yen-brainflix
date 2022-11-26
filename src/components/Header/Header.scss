@@ -54,11 +54,12 @@
         align-items: center;
         border-radius: 4px;
         width: 100%;
-        height: 36px;
+        height: 0px;
         background-color: #0095FF;
         padding: 20px 0px;
         text-align: center;
         border: none;
+        text-decoration: none;
     }
 
     .Header__upload--button:hover {
@@ -66,13 +67,23 @@
         color: white;
     }
 
+    .Header__upload--link{
+        width: 100%;
+        height: 36px;
+        border: none;
+    }
+
     .upload__section--icon {
         margin-left: 5px;
+        height: 24px;
+        width: 24px;
     }
     
     .upload__section--placeholder {
-        padding-left: 35%;
+        padding-left: 33%;
+        font-size: 15px;
         color: white;
+        padding-top: 5px;
     }
     
     .user__icon {
@@ -121,7 +132,8 @@
     }
 
     .upload__section--placeholder {
-        padding-left: 20%;
+        padding-left: 16%;
+        padding-top: 2px;
     }
 }
 

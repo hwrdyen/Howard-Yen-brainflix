@@ -37,7 +37,7 @@ function Comment(props) {
                 <div className="Comment__submitform">
                     <img className="Comment__profileimg" src={User_img} alt="mohan_profile_picture" />
                     <form className="Comment__form" id="Comment__form" onSubmit={handleFormSubmit}>
-                        <label className="Comment__title--comment">JOIN THE CONVERSATION</label>
+                        <label className="Comment__title--comment subheader">JOIN THE CONVERSATION</label>
                         <div className="Comment__form--input">
                             <textarea 
                             type="text"

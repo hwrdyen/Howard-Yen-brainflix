@@ -51,7 +51,9 @@ body {
 label,
 button,
 input,
-textarea {
+input::placeholder,
+textarea,
+textarea::placeholder {
     font-family: "Avenir";
     color: $secondary_darkblack;
 }

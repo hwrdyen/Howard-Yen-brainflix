@@ -1,6 +1,7 @@
 import './VideoPlayer.scss';
 import {useState} from 'react';
 import {useEffect} from 'react';
+import axios from 'axios';
 
 import Video_details from '../../data/video-details.json';
 import Comment from '../Comment/Comment.js';
@@ -73,7 +74,7 @@ function VideoPlayer() {
                             <span className="VideoPlayer-title__title sectionheader">{VideoDetails[CurrentVideoIndex].title}</span>
                             <div className="VideoPlayer-title__subtitle">
                                 <span className="VideoPlayer-subtitle__channel">By {VideoDetails[CurrentVideoIndex].channel}</span>
-                                <span className="VideoPlayer-subtitle__timestamp"> {currentplaying_datetime}</span>
+                                <span className="VideoPlayer-subtitle__timestamp"> {currentplaying_datetime} </span>
                                 <div className="VideoPlayer-subtitle__viewssection">
                                     <img className="VideoPlayer-subtitle__viewsicon" src={Views_icon}/>
                                     <span className="VideoPlayer-subtitle__views">{VideoDetails[CurrentVideoIndex].views}</span>
