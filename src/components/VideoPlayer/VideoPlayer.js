@@ -1,5 +1,6 @@
 import './VideoPlayer.scss';
 import {useState} from 'react';
+import {useEffect} from 'react';
 
 import Video_details from '../../data/video-details.json';
 import Comment from '../Comment/Comment.js';
@@ -13,6 +14,17 @@ import VolumeUp_icon from '../../assets/icons/volume_up.svg';
 function VideoPlayer() {
     const [CurrentVideoIndex, setCurrentVideoIndex] = useState(0);
     const [VideoDetails, setVideoDetails] = useState(Video_details);
+    const CurrentPlaying_timestamp = Video_details[CurrentVideoIndex].timestamp;
+    const [CurrentPlaying_DateTime, setCurrentPlaying_DateTime] = useState(CurrentPlaying_timestamp);
+    function TimestampConverter(timestamp_input) {
+        let timestamp = new Date(timestamp_input);
+        let timestamp_year = timestamp.getFullYear();
+        let timestamp_month = ("00" + (timestamp.getMonth() + 1)).slice(-2);
+        let timestamp_date = ("00" + timestamp.getDate()).slice(-2);
+        let date = (timestamp_month + "/" + timestamp_date + "/" + timestamp_year);
+        return date;
+    }
+    const currentplaying_datetime = TimestampConverter(CurrentPlaying_DateTime);
 
     const updateCurrentVideoIndex = (SelectVideo_index) => {
         console.log(SelectVideo_index);
@@ -61,7 +73,7 @@ function VideoPlayer() {
                             <span className="VideoPlayer-title__title sectionheader">{VideoDetails[CurrentVideoIndex].title}</span>
                             <div className="VideoPlayer-title__subtitle">
                                 <span className="VideoPlayer-subtitle__channel">By {VideoDetails[CurrentVideoIndex].channel}</span>
-                                <span className="VideoPlayer-subtitle__timestamp">{VideoDetails[CurrentVideoIndex].timestamp}</span>
+                                <span className="VideoPlayer-subtitle__timestamp"> {currentplaying_datetime}</span>
                                 <div className="VideoPlayer-subtitle__viewssection">
                                     <img className="VideoPlayer-subtitle__viewsicon" src={Views_icon}/>
                                     <span className="VideoPlayer-subtitle__views">{VideoDetails[CurrentVideoIndex].views}</span>

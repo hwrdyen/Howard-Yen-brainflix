@@ -1,11 +1,10 @@
 import './CommentCard.scss';
-// import {useState} from 'react';
+import {useState} from 'react';
 
 function CommentCard(props) {
     //console.log(props);
-
-    // const [DateTime, setDateTime] = useState(props.comment_date);
-
+    const timestamp = props.comment_date;
+    const [DateTime, setDateTime] = useState(timestamp);
     function TimestampConverter(timestamp_input) {
         let timestamp = new Date(timestamp_input);
         let timestamp_year = timestamp.getFullYear();
@@ -14,6 +13,7 @@ function CommentCard(props) {
         let date = (timestamp_month + "/" + timestamp_date + "/" + timestamp_year);
         return date;
     }
+    const datetime = TimestampConverter(DateTime);
 
     return (
         <>
@@ -23,7 +23,7 @@ function CommentCard(props) {
                     <div className="CommentCard__content--title">
                         <span className="CommentCard__content--name">{props.comment_name}</span>
                         <span className="CommentCard__content--date">
-                            {props.comment_date}
+                            {datetime}
                         </span>
                     </div>
                     <span className="CommentCard__content--content bodycopy">{props.comment_content}</span>

@@ -1,15 +1,16 @@
 import './App.scss';
 import './styles/global.scss';
-// import {useState} from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './components/Header/Header.js';
-import VideoPlayer from './components/VideoPlayer/VideoPlayer.js';
-
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <VideoPlayer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Header />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

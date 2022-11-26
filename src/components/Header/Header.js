@@ -1,5 +1,6 @@
 import './Header.scss';
 
+import VideoPlayer from '../VideoPlayer/VideoPlayer.js';
 import BrainFlix_logo from '../../assets/logos/BrainFlix-logo.svg';
 import Upload_icon from '../../assets/icons/upload.svg';
 import User_img from '../../assets/images/Mohan-muruge.jpg';
@@ -29,7 +30,7 @@ function Header() {
 
                 </div>
             </div>
-
+            <VideoPlayer />
         </>
     );
 }
