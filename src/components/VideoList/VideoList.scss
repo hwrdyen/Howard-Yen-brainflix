@@ -14,6 +14,14 @@
         flex-direction: column;
         margin-top: 16px;
     }
+
+    .NextVideoList__VideoCardLink {
+        text-decoration: none;
+    }
+
+    .NextVideoList__VideoCardLink:visited {
+        color: black;
+    }
 }
 
 @media screen and (min-device-width: 768px){

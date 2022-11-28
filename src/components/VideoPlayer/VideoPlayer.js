@@ -1,54 +1,20 @@
-import './VideoPlayer.scss';
-import {useState} from 'react';
-import {useEffect} from 'react';
-import axios from 'axios';
+import './VideoPlayer.scss'
 
-import Video_details from '../../data/video-details.json';
-import Comment from '../Comment/Comment.js';
 import VideoList from '../VideoList/VideoList.js';
+import Comment from '../Comment/Comment.js';
+
 import Likes_icon from '../../assets/icons/likes.svg';
 import Views_icon from '../../assets/icons/views.svg';
 import Play_icon from '../../assets/icons/play.svg';
 import FullScreen_icon from '../../assets/icons/fullscreen.svg';
 import VolumeUp_icon from '../../assets/icons/volume_up.svg';
 
-function VideoPlayer() {
-    const [CurrentVideoIndex, setCurrentVideoIndex] = useState(0);
-    const [VideoDetails, setVideoDetails] = useState(Video_details);
-    const CurrentPlaying_timestamp = Video_details[CurrentVideoIndex].timestamp;
-    const [CurrentPlaying_DateTime, setCurrentPlaying_DateTime] = useState(CurrentPlaying_timestamp);
-    function TimestampConverter(timestamp_input) {
-        let timestamp = new Date(timestamp_input);
-        let timestamp_year = timestamp.getFullYear();
-        let timestamp_month = ("00" + (timestamp.getMonth() + 1)).slice(-2);
-        let timestamp_date = ("00" + timestamp.getDate()).slice(-2);
-        let date = (timestamp_month + "/" + timestamp_date + "/" + timestamp_year);
-        return date;
-    }
-    const currentplaying_datetime = TimestampConverter(CurrentPlaying_DateTime);
 
-    const updateCurrentVideoIndex = (SelectVideo_index) => {
-        console.log(SelectVideo_index);
-        setCurrentVideoIndex(SelectVideo_index);
-    }
-
-    const AddNewCommenttoDatabase = (newcreated_comment) => {
-        console.log(newcreated_comment);
-        const NewComment = {id: "000", name: "Name", comment: newcreated_comment, timestamp: "000"}
-        const UpdateVideoDetails = [...VideoDetails];
-        for (let i = 0; i<VideoDetails.length; i++) {
-            if (CurrentVideoIndex === i) {
-                const NewCommentList = [...VideoDetails[i].comments, NewComment];
-                UpdateVideoDetails[i].comments = NewCommentList;
-            }
-        }
-        setVideoDetails(UpdateVideoDetails);
-    }
-
+function VideoPlayer (props) {
     return (
         <>
             <section className="VideoPlayer__video">
-                <video className= "VideoPlayer__video--currentvideo" poster={VideoDetails[CurrentVideoIndex].image}></video>
+                <video className= "VideoPlayer__video--currentvideo" poster={props.CurrentVideoInfo.image}></video>
                 <div className= "VideoPlayer__video--icon">
                     <div className= "VideoPlayer__section--left">
                         <img className= "VideoPlayer-icon__play" src={Play_icon}/>
@@ -65,40 +31,38 @@ function VideoPlayer() {
                     </div>
 
                 </div>
-
             </section>
+
             <section className="VideoPlayer__detail">
                 <div className="VideoPlayer__detail--left">
                     <div className="VideoPlayer__info">
                         <div className="VideoPlayer__info--title">
-                            <span className="VideoPlayer-title__title sectionheader">{VideoDetails[CurrentVideoIndex].title}</span>
+                            <span className="VideoPlayer-title__title sectionheader">{props.CurrentVideoInfo.title}</span>
                             <div className="VideoPlayer-title__subtitle">
-                                <span className="VideoPlayer-subtitle__channel">By {VideoDetails[CurrentVideoIndex].channel}</span>
-                                <span className="VideoPlayer-subtitle__timestamp"> {currentplaying_datetime} </span>
+                                <span className="VideoPlayer-subtitle__channel">By {props.CurrentVideoInfo.channel}</span>
+                                <span className="VideoPlayer-subtitle__timestamp"> {props.CurrentVideoInfo.timestamp} </span>
                                 <div className="VideoPlayer-subtitle__viewssection">
                                     <img className="VideoPlayer-subtitle__viewsicon" src={Views_icon}/>
-                                    <span className="VideoPlayer-subtitle__views">{VideoDetails[CurrentVideoIndex].views}</span>
+                                    <span className="VideoPlayer-subtitle__views">{props.CurrentVideoInfo.views}</span>
                                 </div>
                                 <div className="VideoPlayer-subtitle__likessection">
                                     <img className="VideoPlayer-subtitle__likesicon" src={Likes_icon}/>
-                                    <span className="VideoPlayer-subtitle__likes">{VideoDetails[CurrentVideoIndex].likes}</span>
+                                    <span className="VideoPlayer-subtitle__likes">{props.CurrentVideoInfo.likes}</span>
                                 </div>
                                 
                             </div>
                         </div>
 
-                        <span className="VideoPlayer-title__description bodycopy">{VideoDetails[CurrentVideoIndex].description}</span>
+                        <span className="VideoPlayer-title__description bodycopy">{props.CurrentVideoInfo.description}</span>
                     </div>
-                    <Comment comment_list = {VideoDetails[CurrentVideoIndex].comments} AddNewCommenttoDatabase = {AddNewCommenttoDatabase}/>
+                    <Comment Comment_List = {props.CurrentVideoInfo.comments}/>
                 </div>
                 <div className="VideoPlayer__detail--right">
-                    <VideoList CurrentVideoIndex = {CurrentVideoIndex} updateCurrentVideoIndex = {updateCurrentVideoIndex} VideoDetails = {VideoDetails}/>
+                    <VideoList AllVideosInfo = {props.AllVideosInfo} UpdateCurrentVideoId={props.UpdateCurrentVideoId} currentVideoId={props.currentVideoId} defaultVideoId={props.defaultVideoId}/>
                 </div>
             </section>
-
         </>
     );
-
 }
 
 export default VideoPlayer;
