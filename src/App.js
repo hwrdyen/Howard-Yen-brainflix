@@ -11,7 +11,7 @@ import UploadVideo from './pages/UploadVideo/UploadVideo.js';
 import VideoPage from './pages/VideoPage/VideoPage.js';
 
 function App() {
-  const [defaultVideoId, setdefaultVideoId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
+  const [defaultVideoId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
   const [currentVideoId, setcurrentVideoId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
   const [CurrentVideoInfo, setCurrentVideoInfo] = useState({});
   const [CurrentVideoInfoLoading, setCurrentVideoInfoLoading] = useState(true);
@@ -85,7 +85,7 @@ function App() {
             {/* <Route path='*' element={<NotFound/>}/> */}
             <Route path="/" element={<VideoPlayer AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />
             <Route path="upload" element={<UploadVideo />} />
-            <Route path=":videoId" element={<VideoPage AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />
+            <Route path="/video/:videoId" element={<VideoPage AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />
           </Routes>
         </BrowserRouter>
       </>

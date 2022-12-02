@@ -7,11 +7,13 @@ function VideoPage(props) {
 
     //Default Video Id
     if (videoId === props.defaultVideoId) {
+        props.UpdateCurrentVideoId(videoId);
         return <Navigate to="/" />
     }
 
     //Other Video Id
     else {
+        props.UpdateCurrentVideoId(videoId);
         return (
             <>
                 <VideoPlayer AllVideosInfo={props.AllVideosInfo} CurrentVideoInfo={props.CurrentVideoInfo} currentVideoId={props.currentVideoId} UpdateCurrentVideoId={props.UpdateCurrentVideoId} defaultVideoId={props.defaultVideoId}/>

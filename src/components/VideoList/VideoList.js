@@ -9,7 +9,7 @@ function VideoList(props) {
                 <span className="NextVideoList__title subheader">NEXT VIDEOS</span>
                 <section className="NextVideoList__VideoList">{
                     props.AllVideosInfo.map((VideoCard_info) => (
-                        <Link to={`/${VideoCard_info.id}`} className="NextVideoList__VideoCardLink">
+                        <Link to={`/video/${VideoCard_info.id}`} className="NextVideoList__VideoCardLink">
                             <VideoCard VideoCard_info={VideoCard_info} AllVideosInfo={props.AllVideosInfo} currentVideoId={props.currentVideoId} UpdateCurrentVideoId={props.UpdateCurrentVideoId}/>
                         </Link>
                     ))}
