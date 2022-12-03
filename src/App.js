@@ -73,16 +73,9 @@ function App() {
   else {
     return (
       <>
-        {/* {
-          AllVideosInfo.map(item => {
-            return <span>{JSON.stringify(item)}</span>
-          })
-        }
-        <div>{CurrentPlayingVideoInfoId}</div> */}
         <BrowserRouter>
           <Header UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId} />
           <Routes>
-            {/* <Route path='*' element={<NotFound/>}/> */}
             <Route path="/" element={<VideoPlayer AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />
             <Route path="upload" element={<UploadVideo />} />
             <Route path="/video/:videoId" element={<VideoPage AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />

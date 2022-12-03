@@ -1,15 +1,6 @@
 import './VideoCard.scss';
 
 function VideoCard(props) {
-    // const ChangeCurrentVideo = (event) => {
-    //     for (let i = 0; i < props.AllVideosInfo.length; i++) {
-    //         if (props.AllVideosInfo[i].id === event.currentTarget.id) {
-    //             //update the VideoPlayer Id
-    //             props.UpdateCurrentVideoId(event.currentTarget.id);
-    //         }
-    //     }
-    // }
-    
     return (
         <>
             <div className={`VideoCard ${props.currentVideoId === props.VideoCard_info.id ? 'CurrentPlayingVideo' : 'NotPlayingVideo'}`} id={props.VideoCard_info.id}>
