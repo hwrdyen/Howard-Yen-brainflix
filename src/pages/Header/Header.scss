@@ -1,7 +1,7 @@
 @media screen and (min-device-width: 0px){
     .Header {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 1rem;
+        padding-right: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -15,13 +15,13 @@
         align-items: center;
         justify-content: center;
         width: 100vw;
-        margin: 16px 0px;
+        margin: 1rem 0rem;
     }
 
     .Header__logo--link,
     .Header__logo--img {
-        max-height: 25px;
-        max-width: 120px;
+        max-height: 1.5625rem;
+        max-width: 7.5rem;
     }
 
     .Header__navbar :nth-child(1) {order: 1;}
@@ -31,31 +31,31 @@
     .Header__navbar {
         display: flex;
         flex-wrap: wrap;
-        gap: 0px;
+        gap: 0rem;
     }
 
     .Header__search--input {
         width: 70%;
-        height: 36px;
-        border-radius: 4px;
-        padding-left: 40px;
+        height: 2.25rem;
+        border-radius: 0.25rem;
+        padding-left: 2.5rem;
         background: url("../../assets/icons/search.svg") no-repeat left;
-        background-size: 20px;
-        background-position-x: 10px;
-        margin-right: 10px;
-        margin-bottom: 16px;
-        border: 1px solid #E1E1E1;
+        background-size: 1.25rem;
+        background-position-x: 0.625rem;
+        margin-right: 0.625rem;
+        margin-bottom: 1rem;
+        border: 0.0625rem solid #E1E1E1;
 
     }
     
     .Header__upload--button{
         display: flex;
         align-items: center;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         width: 100%;
-        height: 0px;
+        height: 0rem;
         background-color: #0095FF;
-        padding: 20px 0px;
+        padding: 1.25rem 0rem;
         text-align: center;
         border: none;
         text-decoration: none;
@@ -68,29 +68,29 @@
 
     .Header__upload--link{
         width: 100%;
-        height: 36px;
+        height: 2.25rem;
         border: none;
     }
 
     .upload__section--icon {
-        margin-left: 5px;
-        height: 24px;
-        width: 24px;
+        margin-left: 0.3125rem;
+        height: 1.5rem;
+        width: 1.5rem;
     }
     
     .upload__section--placeholder {
         padding-left: 33%;
-        font-size: 15px;
+        font-size: 0.9375rem;
         color: white;
-        padding-top: 5px;
+        padding-top: 0.3125rem;
     }
     
     .user__icon {
         object-position: 20% 80%;
         object-fit: cover;
         border-radius: 50%;
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
     }
 }
 
@@ -99,21 +99,21 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        padding-left: 36px;
-        padding-right: 36px;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
         gap: 20%;
     }
 
     .Header__logo {
-        max-height: 25px;
-        max-width: 120px; 
+        max-height: 1.5625rem;
+        max-width: 7.5rem; 
     }
 
     .Header__navbar {
         display: flex;
         flex-direction: row;
         width: 70%;
-        gap: 15px;
+        gap: 0.9375rem;
     }
 
     .Header__navbar :nth-child(1) {order: 1;}
@@ -122,7 +122,7 @@
 
     .Header__search--input {
         width: 40%;
-        margin-bottom: 0px;
+        margin-bottom: 0rem;
     }
 
     .Header__upload--button {
@@ -131,14 +131,14 @@
 
     .upload__section--placeholder {
         padding-left: 16%;
-        padding-top: 2px;
+        padding-top: 0.125rem;
     }
 }
 
 @media screen and (min-device-width: 1280px){
     .Header {
-        padding-left: 63px;
-        padding-right: 63px;
+        padding-left: 3.9375rem;
+        padding-right: 3.9375rem;
         gap: 35%;
     }
 

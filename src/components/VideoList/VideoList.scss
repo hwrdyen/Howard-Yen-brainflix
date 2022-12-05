@@ -1,8 +1,8 @@
 @media screen and (min-device-width: 0px){
     .NextVideoList__container {
-        padding-left: 16px;
-        padding-right: 16px;
-        margin-bottom: 24px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .NextVideoList__title {
@@ -12,7 +12,7 @@
     .NextVideoList__VideoList {
         display: flex;
         flex-direction: column;
-        margin-top: 16px;
+        margin-top: 1rem;
     }
 
     .NextVideoList__VideoCardLink {
@@ -31,8 +31,8 @@
 
 @media screen and (min-device-width: 1280px){
     .NextVideoList__container {
-        padding-top: 36px;
-        border-left: 1px solid #E1E1E1;
+        padding-top: 2.25rem;
+        border-left: 0.0625rem solid #E1E1E1;
     }
     
 }

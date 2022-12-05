@@ -27,17 +27,17 @@ function UploadVideo() {
             </form>
           </div>
           <div className="UploadVideoForm__videobutton">
-            <div className="UploadVideoForm__publishbutton">
-              <a className="UploadVideoForm__video--publishbutton">
+            <a className="UploadVideoForm__publishbutton" href="#">
+              <div className="UploadVideoForm__video--publishbutton">
                   <img src={Publish_icon} alt="Publish Icon" className="UploadVideoForm__publishbutton--icon"/>
                   <span className="UploadVideoForm__publishbutton--placeholder">PUBLISH</span>
-              </a>
-            </div>
-            <div className="UploadVideoForm__cancelbutton">
-              <a className="UploadVideoForm__video--cancelbutton">
+              </div>
+            </a>
+            <a className="UploadVideoForm__cancelbutton" href="#">
+              <div className="UploadVideoForm__video--cancelbutton">
                   <span className="UploadVideoForm__cancelbutton--placeholder">CANCEL</span>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
       </>
