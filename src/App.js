@@ -17,6 +17,7 @@ function App() {
   const [CurrentVideoInfoLoading, setCurrentVideoInfoLoading] = useState(true);
   const [AllVideosInfo, setAllVideosInfo] = useState([]);
   const [AllVideosInfoLoading, setAllVideosInfoLoading] = useState(true);
+  const [RequiredVideoLoading, setRequiredVideoLoading] = useState(true);
 
   useEffect(() => {
     function GetAllVideosInfo() {
@@ -25,11 +26,14 @@ function App() {
           let videos_info = element.data;
           setAllVideosInfo(videos_info);
           setAllVideosInfoLoading(false);
+          setRequiredVideoLoading(false);
       })
     }
+    if (RequiredVideoLoading === true) {
+      GetAllVideosInfo();
+    }
 
-    GetAllVideosInfo();
-  }, [])
+  }, [AllVideosInfo])
 
   useEffect(() => {
     function GetSingleVideoInfo() {
@@ -60,8 +64,8 @@ function App() {
           <Header UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId} />
           <Routes>
             <Route path="/" element={<VideoPlayer AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />
-            <Route path="upload" element={<UploadVideo />} />
-            <Route path="/video/:videoId" element={<VideoPage AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />
+            <Route path="upload" element={<UploadVideo setAllVideosInfo={setAllVideosInfo} AllVideosInfo={AllVideosInfo} setRequiredVideoLoading={setRequiredVideoLoading}/>} />
+            <Route path="/videos/:videoId" element={<VideoPage AllVideosInfo={AllVideosInfo} CurrentVideoInfo={CurrentVideoInfo} currentVideoId={currentVideoId} UpdateCurrentVideoId={UpdateCurrentVideoId} defaultVideoId={defaultVideoId}/>} />
           </Routes>
         </BrowserRouter>
       </>
