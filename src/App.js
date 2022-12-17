@@ -17,47 +17,30 @@ function App() {
   const [CurrentVideoInfoLoading, setCurrentVideoInfoLoading] = useState(true);
   const [AllVideosInfo, setAllVideosInfo] = useState([]);
   const [AllVideosInfoLoading, setAllVideosInfoLoading] = useState(true);
-  let api_key = undefined;
 
-  function GetRegister() {
-      if (api_key === undefined) {
-          return axios.get("https://project-2-api.herokuapp.com/register").then((response) => {
-              api_key = response.data.api_key;
-              return Promise.resolve(api_key);
-          })
-      }
-      else {
-          return Promise.resolve(api_key);
-      }
-  }
-
-  function GetAllVideosInfo() {
-    GetRegister().then((api_key) => {
-      return axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${api_key}`)
+  useEffect(() => {
+    function GetAllVideosInfo() {
+      return axios.get(`http://localhost:8080/videos`)
       .then((element) => {
           let videos_info = element.data;
           setAllVideosInfo(videos_info);
           setAllVideosInfoLoading(false);
       })
-    })
-  }
+    }
 
-  useEffect(() => {
     GetAllVideosInfo();
   }, [])
 
-  function GetSingleVideoInfo() {
-    GetRegister().then((api_key) => {
-      return axios.get(`https://project-2-api.herokuapp.com/videos/${currentVideoId}?api_key=${api_key}`)
+  useEffect(() => {
+    function GetSingleVideoInfo() {
+      return axios.get(`http://localhost:8080/videos/${currentVideoId}`)
       .then((element) => {
         let currentvideo_info = element.data;
           setCurrentVideoInfo(currentvideo_info);
           setCurrentVideoInfoLoading(false);
       })
-    })
-  }
+    }
 
-  useEffect(() => {
     GetSingleVideoInfo();
   }, [currentVideoId])
 
