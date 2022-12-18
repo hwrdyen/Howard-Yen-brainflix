@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Publish_icon from '../../assets/icons/publish.svg';
-import UploadVideo_preview from '../../assets/images/Upload-video-preview.jpg';
+// import UploadVideo_preview from '../../assets/images/Upload-video-preview.jpg';
 
 function UploadVideo(props) {
     const [NewUploadVideo, setNewUploadVideo] = useState({
@@ -52,7 +52,7 @@ function UploadVideo(props) {
         newvideo_title_section.classList.remove("inputredborder");
         newvideo_description_section.classList.remove("inputredborder");
 
-        let newuploadvideoobj = {...NewUploadVideo, id:uuidv4() , title:newvideo_title, description:newvideo_description};
+        let newuploadvideoobj = {...NewUploadVideo, id:uuidv4() , title:newvideo_title, description:newvideo_description, timestamp:Date.now()};
         console.log(newuploadvideoobj);
         setNewUploadVideo(newuploadvideoobj);
         setClickSubmit(true);
@@ -80,6 +80,16 @@ function UploadVideo(props) {
       }
     }
 
+    const click_cancel_button = (event) => {
+      let form = document.querySelector("#UploadVideoForm__form");
+      event.preventDefault();
+      let newvideo_title_section = document.getElementById("UploadVideoForm__video--input");
+      let newvideo_description_section = document.getElementById("UploadVideoForm__video--textarea");
+      newvideo_title_section.classList.remove("inputredborder");
+      newvideo_description_section.classList.remove("inputredborder");
+      form.reset();
+    }
+
 
     
 
@@ -91,7 +101,7 @@ function UploadVideo(props) {
           <div className="UploadVideoForm__content">
             <div className="UploadVideoForm__thumbnail">
                 <span className="UploadVideoForm__thumbnail--title subheader">VIDEO THUMBNAIL</span>
-                <img src={UploadVideo_preview} alt="Upload Video Preview img" className="UploadVideoForm__thumbnail--img"/>
+                <img src="http://localhost:8080/assets/image8.jpeg" className="UploadVideoForm__thumbnail--img"/>
             </div>
             <form className="UploadVideoForm__form" id="UploadVideoForm__form">
                 <div className="UploadVideoForm__videotitle">
@@ -106,17 +116,17 @@ function UploadVideo(props) {
             </form>
           </div>
           <div className="UploadVideoForm__videobutton">
-            <a className="UploadVideoForm__publishbutton" id="UploadVideoForm__publishbutton" onClick={click_submit_button}>
+            <div className="UploadVideoForm__publishbutton" id="UploadVideoForm__publishbutton" onClick={click_submit_button}>
               <div className="UploadVideoForm__video--publishbutton">
                   <img src={Publish_icon} alt="Publish Icon" className="UploadVideoForm__publishbutton--icon"/>
                   <span className="UploadVideoForm__publishbutton--placeholder">PUBLISH</span>
               </div>
-            </a>
-            <a className="UploadVideoForm__cancelbutton" id="UploadVideoForm__cancelbutton">
+            </div>
+            <div className="UploadVideoForm__cancelbutton" id="UploadVideoForm__cancelbutton" onClick={click_cancel_button}>
               <div className="UploadVideoForm__video--cancelbutton">
                   <span className="UploadVideoForm__cancelbutton--placeholder">CANCEL</span>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </>

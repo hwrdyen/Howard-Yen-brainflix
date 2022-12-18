@@ -58,6 +58,15 @@ textarea::placeholder {
     color: $secondary_darkblack;
 }
 
+*,*:focus,*:hover{
+    outline:none;
+}
+
+input:focus,
+textarea:focus {
+    border: 0.125rem solid #0095FF;
+}
+
 .inputredborder {
     border: 0.125rem solid red;
 }
