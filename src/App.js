@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     function GetAllVideosInfo() {
-      return axios.get(`http://localhost:8080/videos`)
+      return axios.get(`https://howard-brainflix-api.herokuapp.com/videos`)
       .then((element) => {
           let videos_info = element.data;
           setAllVideosInfo(videos_info);
@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => {
     function GetSingleVideoInfo() {
-      return axios.get(`http://localhost:8080/videos/${currentVideoId}`)
+      return axios.get(`https://howard-brainflix-api.herokuapp.com/videos/${currentVideoId}`)
       .then((element) => {
         let currentvideo_info = element.data;
           setCurrentVideoInfo(currentvideo_info);

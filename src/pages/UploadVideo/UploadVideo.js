@@ -24,7 +24,7 @@ function UploadVideo(props) {
 
     useEffect(() => {
       if (ClickSubmit === true) {
-        axios.post('http://localhost:8080/videos', NewUploadVideo)
+        axios.post('https://howard-brainflix-api.herokuapp.com/videos', NewUploadVideo)
         .then(res => {
           console.log(res);
           allvideoinfo.push(NewUploadVideo);
@@ -101,7 +101,7 @@ function UploadVideo(props) {
           <div className="UploadVideoForm__content">
             <div className="UploadVideoForm__thumbnail">
                 <span className="UploadVideoForm__thumbnail--title subheader">VIDEO THUMBNAIL</span>
-                <img src="http://localhost:8080/assets/image8.jpeg" className="UploadVideoForm__thumbnail--img"/>
+                <img src="https://howard-brainflix-api.herokuapp.com/assets/image8.jpeg" className="UploadVideoForm__thumbnail--img"/>
             </div>
             <form className="UploadVideoForm__form" id="UploadVideoForm__form">
                 <div className="UploadVideoForm__videotitle">
