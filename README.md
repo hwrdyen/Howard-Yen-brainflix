@@ -1,3 +1,7 @@
+# Brainflix Video Stream Platform
+![responsive mockup](https://github.com/hwrdyen/Howard-Yen-brainflix/assets/54991780/69576ca1-44ed-43ff-a878-d2330ba9c214)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
