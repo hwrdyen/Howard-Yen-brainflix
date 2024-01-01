@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     function GetAllVideosInfo() {
       return axios
-        .get(`https://brainflix-video-be.onrender.com/videos`)
+        .get(`https://brainflix-video-backend.onrender.com/videos`)
         .then((element) => {
           let videos_info = element.data;
           setAllVideosInfo(videos_info);
@@ -40,7 +40,9 @@ function App() {
   useEffect(() => {
     function GetSingleVideoInfo() {
       return axios
-        .get(`https://brainflix-video-be.onrender.com/videos/${currentVideoId}`)
+        .get(
+          `https://brainflix-video-backend.onrender.com/videos/${currentVideoId}`
+        )
         .then((element) => {
           let currentvideo_info = element.data;
           setCurrentVideoInfo(currentvideo_info);
