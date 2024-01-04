@@ -9,6 +9,7 @@ import Header from "./pages/Header/Header.js";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer.js";
 import UploadVideo from "./pages/UploadVideo/UploadVideo.js";
 import VideoPage from "./pages/VideoPage/VideoPage.js";
+import Spinner from "./components/Spinner/Spinner.jsx";
 
 function App() {
   const [defaultVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");
@@ -59,7 +60,15 @@ function App() {
   }
 
   if (AllVideosInfoLoading || CurrentVideoInfoLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="Spinner__Container">
+        <div>
+          Currently Using a Free Cloud Service, so might take a minute to
+          load...
+        </div>
+        <Spinner />
+      </div>
+    );
   } else {
     return (
       <>
